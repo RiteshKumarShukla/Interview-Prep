@@ -1,0 +1,258 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.item1 { grid-area: a; }
+.item2 { grid-area: b; }
+.item3 { grid-area: c; }
+.item4 { grid-area: d; }
+.item5 { grid-area: e; }
+.item6 { grid-area: f; }
+.item7 { grid-area: g; }
+.item8 { grid-area: h; }
+.item9 { grid-area: i; }
+.item10 { grid-area: j; }
+.item11 { grid-area: k; }
+.item12 { grid-area: l; }
+.item13 { grid-area: m; }
+.item14 { grid-area: n; }
+.item15 { grid-area: o; }
+.item16 { grid-area: p; }
+.item17 { grid-area: q; }
+.item18 { grid-area: r; }
+
+.container {
+  display: grid;
+  grid-template-areas:
+    'a a b b'
+    'a a b b'
+    'a a b b'
+    'c c d e'
+    'f g h i'
+    'j j k k'
+    'l l m m'
+    'l l m m'
+    'n n o p'
+    'n n o p'
+    'n n o p'
+    'q q q q'
+    'q q q q'
+    'r r r r'
+    'r r r r'
+    
+    ;
+ 
+  /* background-color: #2196F3; */
+ 
+}
+.container div{
+   
+}
+img{
+    width: 100%;
+}
+.item2{
+    background-color: #f5e3d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.item2 div{
+    width: 80%;
+  
+}
+.item2 div button{
+   width: 30%;
+   height: 45px;
+   border-radius: 40px;
+   background-color: transparent;
+  
+}
+.item2 div p{
+line-height: 27px;
+}
+.item3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item3 div{
+width: 90%;
+}
+.p3{
+    color: #000000;
+}
+.item4{
+    overflow: hidden;
+}
+.item5{
+    overflow-y: hidden;
+    background-color: #ebaf4f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+height: 334px;
+}
+
+progress{
+    width: 90%;
+    height: 5px;
+    margin-bottom: 20px;
+}
+.item6{
+    background-color: orange;
+    height: 334px;
+}
+.item7{
+    background-color: #fb683d;
+}
+.item8{
+    background-color: #161616;
+}
+.item9{
+    background-color: #ffffff;
+}
+.item6 div,.item7 div,.item8 div, .item9 div{
+    width: 90%;
+    color: white;
+    text-align: center;
+    line-height: 28px;
+
+}
+.item9 div{
+    color: black;
+
+}
+.item6,.item7,.item8,.item9{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item11{
+    background-color: #fb683d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.item11 div,.item12 div{
+    width: 80%;
+    color: white;
+}
+.item12{
+    background-color:#ebaf4f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item14{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fb683d;
+}
+.item14 form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+   
+}
+.item14 form h2,p{
+    color: white;
+}
+
+.item14 form input,textarea{
+    outline: none;
+   border-left: none;
+   border-top: none;
+   border-right: none;
+   border-bottom: 1px solid white;
+   background-color: #fb683d;
+   color: white;
+   font-size: 1rem;
+  
+}
+.item14 form input{
+    padding: 5px;
+}
+#submitt{
+    
+    width: 200px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    
+}
+.item16{
+    background-color: #161616;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.item16 div{
+    width: 90%;
+    color: white;
+}
+.item17{
+    background-color: #fb683d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+.item17 iframe{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.item18{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: white;
+
+}
+.item18 p{
+    color: black;
+}
+.footerLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+.NAVBAR{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    
+
+}
+.leftheader{
+    width: 50%;
+}
+.rightheader{
+    width: 50%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+}
+a{
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: rgb(22, 22, 22);
+}
+ .leftheader h1{
+    margin-left: 50px;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px white;
+ }
