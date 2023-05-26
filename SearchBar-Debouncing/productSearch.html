@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Search with Debouncing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    .search-container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .search-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    .search-results {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .search-results li {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      cursor: pointer;
+    }
+    
+    .search-results li:last-child {
+      border-bottom: none;
+    }
+    
+    .search-results li:hover {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+    <ul id="searchResults" class="search-results"></ul>
+  </div>
+
+  <script>
+    // Debouncing function
+    function debounce(func, delay) {
+      let timeoutId;
+      return function () {
+        const context = this;
+        const args = arguments;
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(function () {
+          func.apply(context, args);
+        }, delay);
+      };
+    }
+
+    // Function to perform the product search using the Fake Store API
+    function performProductSearch(query) {
+      const apiUrl = `https://fakestoreapi.com/products`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          const searchResults = data.filter(product => product.title.toLowerCase().includes(query.toLowerCase()));
+
+          // Clear previous results
+          const resultsContainer = document.getElementById("searchResults");
+          resultsContainer.innerHTML = "";
+
+          if (searchResults.length > 0) {
+            searchResults.forEach(result => {
+              const listItem = document.createElement("li");
+              listItem.innerHTML = `<strong>${result.title}</strong> - $${result.price}`;
+              resultsContainer.appendChild(listItem);
+            });
+          } else {
+            const listItem = document.createElement("li");
+            listItem.textContent = "No results found.";
+            resultsContainer.appendChild(listItem);
+          }
+        })
+        .catch(error => {
+          console.log("An error occurred while fetching data from the API:", error);
+        });
+    }
+
+    // Debounced version of the product search function
+    const debouncedProductSearch = debounce(performProductSearch, 300);
+
+    // Event listener for search input
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("input", function () {
+      const query = this.value;
+      debouncedProductSearch(query);
+    });
+  </script>
+</body>
+</html>
