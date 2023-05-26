@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #dragElement {
+        width: 100px;
+        height: 50px;
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        cursor: move;
+        border-radius: 5px;
+      }
+
+      #dropZone {
+        width: 200px;
+        height: 200px;
+        background-color: #f9f9f9;
+        border: 2px dashed #aaa;
+        text-align: center;
+        line-height: 200px;
+        font-size: 18px;
+        color: #999;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dragElement" draggable="true">Drag Me</div>
+
+    <div id="dropZone">Drop Here</div>
+
+    <script>
+      var dragElement = document.getElementById("dragElement");
+      var dropZone = document.getElementById("dropZone");
+
+      // Add event listeners for drag events
+      dragElement.addEventListener("dragstart", dragStart);
+      dragElement.addEventListener("dragend", dragEnd);
+      dropZone.addEventListener("dragover", dragOver);
+      dropZone.addEventListener("dragenter", dragEnter);
+      dropZone.addEventListener("dragleave", dragLeave);
+      dropZone.addEventListener("drop", drop);
+
+      function dragStart(event) {
+        event.dataTransfer.setData("text/plain", event.target.id);
+        event.target.style.opacity = "0.5";
+      }
+
+      function dragEnd(event) {
+        event.target.style.opacity = "1";
+      }
+
+      function dragOver(event) {
+        event.preventDefault();
+      }
+
+      function dragEnter(event) {
+        event.target.style.background = "#e9e9e9";
+      }
+
+      function dragLeave(event) {
+        event.target.style.background = "#f9f9f9";
+      }
+
+      function drop(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("text/plain");
+        var draggedElement = document.getElementById(data);
+        event.target.appendChild(draggedElement);
+        event.target.style.background = "#f9f9f9";
+      }
+    </script>
+  </body>
+</html>
