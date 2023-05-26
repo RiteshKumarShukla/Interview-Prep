@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slider</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .slider-container {
+        width: 400px;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .slider {
+        display: flex;
+        height: 100%;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slider-item {
+        flex: 0 0 100%;
+        height: 100%;
+        background-color: #4caf50;
+        color: #fff;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .slider-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      .slider-button-prev {
+        left: 10px;
+      }
+
+      .slider-button-next {
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slider-item">Slide 1</div>
+        <div class="slider-item">Slide 2</div>
+        <div class="slider-item">Slide 3</div>
+      </div>
+      <button class="slider-button slider-button-prev" onclick="prevSlide()">
+        &larr;
+      </button>
+      <button class="slider-button slider-button-next" onclick="nextSlide()">
+        &rarr;
+      </button>
+    </div>
+
+    <script>
+      const slider = document.querySelector(".slider");
+      const sliderItems = document.querySelectorAll(".slider-item");
+      const prevButton = document.querySelector(".slider-button-prev");
+      const nextButton = document.querySelector(".slider-button-next");
+      const slideWidth = sliderItems[0].offsetWidth;
+      let currentIndex = 0;
+
+      function slideToIndex(index) {
+        slider.style.transform = `translateX(-${slideWidth * index}px)`;
+        currentIndex = index;
+      }
+
+      function nextSlide() {
+        if (currentIndex === sliderItems.length - 1) {
+          slideToIndex(0);
+        } else {
+          slideToIndex(currentIndex + 1);
+        }
+      }
+
+      function prevSlide() {
+        if (currentIndex === 0) {
+          slideToIndex(sliderItems.length - 1);
+        } else {
+          slideToIndex(currentIndex - 1);
+        }
+      }
+
+      // Auto-slide
+      setInterval(nextSlide, 3000);
+    </script>
+  </body>
+</html>
