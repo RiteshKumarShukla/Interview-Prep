@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        background-color: aliceblue;
+      }
+
+      img {
+        max-width: 60%;
+      }
+
+      .container {
+        max-width: 1115px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      /* main menu css */
+      .header_menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+      }
+      .header_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 60px;
+      }
+      .main_menu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .main_menu ul li {
+        display: inline-block;
+        position: relative;
+      }
+
+      .main_menu ul li a {
+        font-size: 16px;
+        font-weight: 600;
+        color:black;
+        display: block;
+        margin-left: 35px;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: 0.3s;
+      }
+
+      .main_menu ul li a:hover {
+        border-bottom: 1px solid #fff;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+      }
+
+      .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color:black;
+      }
+
+      @media only screen and (min-width: 992px) and (max-width: 1200px) {
+        .container {
+          max-width: 960px;
+        }
+      }
+
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .container {
+          max-width: 720px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        section {
+          padding: 0 15px;
+        }
+        .header_menu {
+          width: -webkit-fill-available;
+        }
+        .hamburger {
+          display: block;
+        }
+        .hamburger.active .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+        .hamburger.active .bar:nth-child(2) {
+          opacity: 0;
+        }
+        .hamburger.active .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+        .main_menu nav ul {
+          position: fixed;
+          left: -100%;
+          top: 115px;
+          background-color:coral;
+          width: 100%;
+          text-align: center;
+          transition: 0.3s;
+        }
+        .main_menu nav ul.active {
+          left: 0;
+          padding: 30px 0;
+        }
+        .main_menu nav ul li,
+        .footer_menu ul li {
+          display: block;
+          margin-bottom: 25px;
+        }
+        .main_menu nav ul li:last-child {
+          margin-bottom: 0;
+        }
+        .main_menu nav ul li a {
+          border-bottom: none;
+          margin-left: 0;
+        }
+        .main_menu nav ul li a:hover {
+          border-bottom: none;
+          color: royalblue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="header_menu">
+      <div class="container">
+        <div class="header_wrapper">
+          <div class="logo">
+            <a href="#">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAkeSQuDGTBJGlg1H1NErkVOu8MLsooyc92A&usqp=CAU" alt="Logo" />
+            </a>
+          </div>
+          <div class="main_menu">
+            <nav>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Support</a></li>
+              </ul>
+              <!-- mobile menu -->
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navmenu = document.querySelector(".main_menu nav ul");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navmenu.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".main_menu nav ul li a").forEach((n) =>
+      n.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navmenu.classList.remove("active");
+      })
+    );
+  </script>
+</html>
