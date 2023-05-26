@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        .container {
+            margin:auto;
+            width:800px;
+            display: flex;
+            justify-content:space-between;
+            margin-top:200px;
+        }
+        .container>div{
+            border:1px solid black;
+            padding: 10px;
+        }
+      .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+
+      .tooltip .tooltip-text {
+        visibility: hidden;
+        width: 120px;
+        background-color:coral;
+        color:black;
+        text-align: center;
+        border-radius: 4px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .tooltip:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .tooltip.left .tooltip-text {
+        bottom: 0;
+        top: auto;
+        right: 100%;
+        left: auto;
+        margin-left: 0;
+        margin-bottom: -15px;
+      }
+
+      .tooltip.right .tooltip-text {
+        bottom: 0;
+        top: auto;
+        left: 100%;
+        margin-left: 0;
+        margin-bottom: -15px;
+      }
+
+      .tooltip.top .tooltip-text {
+        bottom: auto;
+        top: -15px;
+        left: 50%;
+        margin-left: -60px;
+      }
+
+      .tooltip.bottom .tooltip-text {
+        bottom: auto;
+        top: 100%;
+        left: 50%;
+        margin-left: -60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tooltip left">
+        <span class="tooltip-text">Tooltip on the left</span>
+        Left Div
+      </div>
+
+      <div class="tooltip right">
+        <span class="tooltip-text">Tooltip on the right</span>
+        Right Div
+      </div>
+
+      <div class="tooltip top">
+        <span class="tooltip-text">Tooltip on the top</span>
+        Top Div
+      </div>
+
+      <div class="tooltip bottom">
+        <span class="tooltip-text">Tooltip on the bottom</span>
+        Bottom Div
+      </div>
+    </div>
+  </body>
+</html>
