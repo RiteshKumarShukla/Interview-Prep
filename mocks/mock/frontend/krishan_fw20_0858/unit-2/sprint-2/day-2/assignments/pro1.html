@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Grid 1</title>
+    <style>
+        
+        #container{
+            display: grid;
+            
+            grid-template-columns: 500px;
+            grid-template-rows: repeat(3,100px);
+            gap:10px;
+            
+        }
+        #first{
+            display: grid;
+            grid-template-columns: repeat(2,245px);
+            grid-template-rows: 100px;
+            gap:10px;
+            
+        }
+        #sec{
+            display: grid;
+            grid-template-columns: 145px 345px;
+            grid-template-rows: 100px;
+            gap:10px;
+            
+        }
+        #third{
+            display: grid;
+            grid-template-columns: 500px;
+            grid-template-rows: 100px;
+              
+        }
+        .grey{
+            background-color: rgb(79, 78, 78);
+            border-radius: 5px;
+            font-size: 19px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+    <div id="first">
+        <div class="grey">A</div>
+        <div class="grey">B</div>
+    </div>
+    <div id="sec">
+        <div class="grey">C</div>
+        <div class="grey">D</div>
+    </div>
+    <div id="third" class="grey">E</div>
+    
+</div>
+</body>
+</html>

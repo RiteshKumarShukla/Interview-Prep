@@ -1,0 +1,12 @@
+{
+  "name": "assignments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

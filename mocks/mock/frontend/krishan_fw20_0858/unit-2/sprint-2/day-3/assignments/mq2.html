@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mq2</title>
+    <style>
+       #nav{
+        height:70px;
+        background-color: yellow;
+        font-size:50px;
+        margin:30px auto;
+       }
+       #box{
+        display: grid;
+        grid-template-columns: 60% 38%;
+        grid-template-rows: 600px;
+        gap:30px;
+       }
+       #box>div:nth-child(1){
+        background-color: red;
+       }
+       #secbox{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows:repeat(3,auto) ;
+        gap:30px;
+       }
+       #secbox>.green{
+        background-color: green;
+       }
+       @media all and (min-width:481px) and (max-width:768px){
+        #nav{
+        height:70px;
+        background-color: yellow;
+        font-size:50px;
+        margin:30px auto;
+       }
+       #box{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px;
+        gap:30px;
+       }
+       #box>div:nth-child(1){
+        background-color: red;
+       }
+       #secbox{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows:repeat(3,200px   ) ;
+        gap:30px;
+       }
+       #secbox>.green{
+        background-color: green;
+       }
+       }
+
+       @media all and (min-width:320px) and (max-width:480px){
+        #nav{
+        height:70px;
+        background-color: yellow;
+        font-size:50px;
+        margin:30px auto;
+       }
+       #box{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px;
+        gap:30px;
+       }
+       #box>div:nth-child(1){
+        background-color: red;
+       }
+       #secbox{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows:repeat(3,200px) ;
+        gap:30px;
+       }
+       #secbox>.green{
+        background-color: green;
+       }
+       }
+
+    </style>
+</head>
+<body>
+    <div id="nav">Navigation</div>
+    <div id="box">
+        <div>Left Box</div>
+        <div id="secbox">
+            <div class="green">Right Box1</div>
+            <div class="green">Right Box2</div>
+            <div class="green">Right Box3</div>
+        </div>
+    </div>
+</body>
+</html>

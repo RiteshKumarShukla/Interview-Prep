@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        button{
+            padding:10px 15px;
+            margin:50px;
+        }
+    </style>
+</head>
+<body>
+    
+        <img src="https://media.istockphoto.com/photos/happy-puppy-dog-running-on-playground-green-yard-picture-id1197074302?k=20&m=1197074302&s=612x612&w=0&h=lSFkBMEwo4VnNAPuRVv-nAuc5dp1k1E62or2b70SbZs=" alt="">
+        <p>Likes:-<span id="likeout"></span></p>
+        <p>Dislikes:-<span id="dislikeout"></span></p>
+        <button id="like">Like</button>
+        <button id="dislike">Dislike</button>
+    
+</body>
+<script>
+
+    // add event listener to like button
+    document.querySelector("#like").addEventListener("click",likec);
+    
+    let count;
+    // for initialize the count
+    if(localStorage.getItem("likecount")==null){
+        count=0;
+    }
+    else{
+        count=localStorage.getItem("likecount")
+    }
+
+
+    // for show before the function 
+
+
+    document.querySelector("#likeout").innerText=count;
+    let discount;
+
+
+    // initializing dislike count 
+    if(localStorage.getItem("dislikecount")==null){
+        discount=0;
+    }
+    else{
+        discount=localStorage.getItem("dislikecount")
+    }
+
+
+    // for show before dislike function
+        document.querySelector("#dislikeout").innerText=discount;
+
+        // like button function 
+    function likec(){
+        event.preventDefault;
+        count++;
+        document.querySelector("#likeout").innerText=count;
+        localStorage.setItem("likecount",count)
+    }
+
+
+//adding addevent listener to dislike button
+    document.querySelector("#dislike").addEventListener("click",disc)
+
+
+// dislike function
+    function disc(){
+        event.preventDefault;
+        discount++;
+        document.querySelector("#dislikeout").innerText=discount;
+        localStorage.setItem("dislikecount",discount)
+    }
+
+    
+</script>
+</html>

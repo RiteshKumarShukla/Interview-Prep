@@ -1,0 +1,71 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "jeans",
+      "image": "https://assets.ajio.com/medias/sys_master/root/20210728/I1Im/61005afff997ddb3123c041e/-288Wx360H-441128531-jetblack-MODEL.jpg",
+      "price": "899",
+      "id": 2
+    },
+    {
+      "name": "jeans",
+      "image": "https://assets.ajio.com/medias/sys_master/root/20210728/I1Im/61005afff997ddb3123c041e/-288Wx360H-441128531-jetblack-MODEL.jpg",
+      "price": "899",
+      "id": 3
+    },
+    {
+      "name": "jeans",
+      "image": "https://assets.ajio.com/medias/sys_master/root/20210728/I1Im/61005afff997ddb3123c041e/-288Wx360H-441128531-jetblack-MODEL.jpg",
+      "price": "899",
+      "id": 4
+    },
+    {
+      "name": "jean",
+      "image": "https://cdn.thewirecutter.com/wp-content/media/2021/05/mensjeans-2048px-3861.jpg?auto=webp&quality=75&width=1024",
+      "price": "599",
+      "id": 5
+    },
+    {
+      "name": "shirt",
+      "image": "https://5.imimg.com/data5/YJ/BO/MY-10973479/mens-designer-casual-shirt-500x500.jpg",
+      "price": "200",
+      "id": 6
+    },
+    {
+      "name": "shirt",
+      "image": "https://5.imimg.com/data5/YJ/BO/MY-10973479/mens-designer-casual-shirt-500x500.jpg",
+      "price": "200",
+      "id": 7
+    },
+    {
+      "name": "krishan",
+      "image": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg",
+      "price": "2222",
+      "id": 8
+    },
+    {
+      "id": "ameer",
+      "title": "https://media.comicbook.com/2017/10/iron-man-movie-poster-marvel-cinematic-universe-1038878.jpg",
+      "author": "900"
+    },
+    {
+      "id": "Iron man 2",
+      "title": "https://media.comicbook.com/2017/10/iron-man-movie-poster-marvel-cinematic-universe-1038878.jpg",
+      "author": "2323"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

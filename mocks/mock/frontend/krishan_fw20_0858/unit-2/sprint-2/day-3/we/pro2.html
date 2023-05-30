@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan</title>
+    <style>
+        h1{
+            color:rgb(30, 49, 30);
+            text-align: center;
+            margin:3% 38%;
+        }
+        body>p{
+            color:grey;
+            text-align: center;
+            margin:0px 36%;
+        }
+        #main{
+            width:70%;
+            margin:1% auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(1,auto);
+            
+            gap:7%;
+        }
+        
+        #main>div>#flex{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+           
+            padding: 15%;
+            
+        }
+        #flex>h2{
+            margin-bottom: 0px; 
+            margin-top: 0px;
+
+        }
+        #flex>#pm{
+            margin-top: 1%; 
+
+        }
+        #flex>#free{
+            color:green;
+        }
+        #flex>#org{
+            color:orange;
+        }
+        #flex>#blue{
+            color:mediumblue;
+        }
+        #flex>h3{
+            color: rgb(30, 49, 30);;
+        }
+        #flex>button{
+            padding:5%;
+            background-color: rgb(75, 75, 239);
+            color:white;
+            font-weight: bold;
+            border:0px;
+            font-size: 17px;
+            border-radius: 5%;
+        }
+        @media all and (min-width:481px) and (max-width:768px){
+            #main{
+            width:70%;
+            margin:1% auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(1,auto);
+            
+            gap:7%;
+        }
+        h1{
+            color:rgb(30, 49, 30);
+            text-align: center;
+            margin:auto;
+        }
+        body>p{
+            color:grey;
+            text-align: center;
+            margin: 2% auto;
+        }
+        }
+
+        @media all and (min-width:360px) and (max-width:480px){
+            #main{
+            width:70%;
+            margin:1% auto;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(1,auto);
+            
+            gap:7%;
+        }
+        h1{
+            color:rgb(30, 49, 30);
+            text-align: center;
+            margin:auto;
+        }
+        body>p{
+            color:grey;
+            text-align: center;
+            margin: 2% auto;
+        }
+        }
+    </style>
+</head>
+<body>
+    <h1>Choose a plan for right for your business</h1>
+    <p id="intro">
+        We collect reviews from our users so you can get a honest opinion of what an experience with our website are really like;
+    </p>
+    
+    <div id="main">
+        <div>
+            <div id="flex">
+            <h3>Starter plan</h3>
+            <h2 id="free">Free</h2>
+            <p id="pm">per month</p>
+            <p>We collect reviews from our users so you can get a honest opinion of what an experience with our website.</p>
+            <button>Start Now</button>
+        </div>
+        </div>
+        <div><div id="flex">
+            <h3>Business Plan</h3>
+            <h2 id="org">$39.00</h2>
+            <p id="pm">per month</p>
+            <p>We collect reviews from our users so you can get a honest opinion of what an experience with our website.</p>
+            <button>Start Now</button>
+        </div>
+        </div>
+        <div><div id="flex">
+            <h3>Standard plan</h3>
+            <h2 id="blue">$59.00</h2>
+            <p id="pm">per month</p>
+            <p>We collect reviews from our users so you can get a honest opinion of what an experience with our website.</p>
+            <button>Start Now</button></div>
+    </div>
+    
+    </div>
+</body>
+</html>

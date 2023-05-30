@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+.App input{
+  height: 40px;
+  width: 80px;
+  margin:1rem .2rem;
+  text-align: center;
+}
+.fillPassword{
+  color:green;
+  background-color: lightgreen;
+  border: 2px solid green;
+}

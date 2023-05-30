@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div id="our"></div>
+    <div id="data"></div>
+</body>
+</html> 
+<script type="module">
+    import navbar from './components/nav.js'
+
+    document.getElementById('our').innerHTML=navbar()
+
+    import {getdata,appenddata} from './scripts/ind2.js'
+
+    let res=await getdata('https://www.themealdb.com/api/json/v1/1/categories.php')
+    console.log(res);
+
+    let data_cont=document.getElementById('data');
+
+    appenddata(res['categories'],data_cont)
+
+</script>

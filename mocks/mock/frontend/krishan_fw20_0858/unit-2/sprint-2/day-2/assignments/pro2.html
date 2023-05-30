@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 2</title>
+    <style>
+     #container{
+        display: grid;
+        grid-template-columns: 400px 200px 200px;
+        grid-template-rows: 220px;
+        gap:20px;
+     }
+     #rc{
+         display: grid;
+         grid-template-columns: 400px;
+         grid-template-rows:  100px 100px;
+         gap:20px;
+     }
+     #A{
+        display: grid;
+        grid-template-columns: 400px;
+        grid-template-rows: 100px;
+
+     }
+     #first{
+        display: grid;
+        grid-template-columns: repeat(2,190px);
+        grid-template-rows: 100px;
+        gap:20px;
+     }
+     .sec{
+        display: grid;
+        grid-template-columns: 200px;
+        grid-template-rows: 200px;
+
+     }
+     .grey{
+        background-color: rgb(83, 79, 79);
+        color:white;
+        font-weight: bold;
+        font-size: 19px;
+        border-radius: 9px;
+     }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="rc">
+            <div class="grey" id="A">A</div>
+            <div id="first">
+                <div class="grey box" >B</div>
+                <div class="grey box">C</div>
+            </div>
+            </div>
+            
+        <div class="sec grey">D</div>
+        <div  class="grey sec">E</div>
+    </div>
+</body>
+</html>

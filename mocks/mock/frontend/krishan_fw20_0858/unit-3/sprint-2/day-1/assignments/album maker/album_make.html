@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Maker</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, black,white);
+        }
+        #container{
+            width: 60%;
+            margin: 17% auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #container>input{
+            width:600px;
+            height: 60px;
+            border-radius: 10px;
+            border:1px solid gray;
+        }
+        #container>button{
+            width:100px;
+            height:40px;
+            border-radius: 10px;
+            border:1px solid black ;
+            background-color: black;
+            color:white;
+        }
+        #slide{
+            background-color: white;
+            color:black;
+            width:100px;
+            height:40px;
+            border-radius: 10px;
+            border:1px solid black ;
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="slide()" id="slide">Slideshow</button>
+    <div id="container">
+        <input type="text" id="url" placeholder="Enter Image Url">
+    <button onclick="storeImage()">Submit</button>
+    </div>
+    
+</body>
+</html>
+<script>
+
+function slide(){
+    window.location.href="slideshow.html"
+}
+
+
+function storeImage(){
+
+    let arr=JSON.parse(localStorage.getItem("imagesdata")) || []
+    let url=document.getElementById("url").value;
+     
+
+    arr.push(url);
+
+    localStorage.setItem("imagesdata",JSON.stringify(arr))
+    
+    document.getElementById("url").value=null;
+}
+
+</script>

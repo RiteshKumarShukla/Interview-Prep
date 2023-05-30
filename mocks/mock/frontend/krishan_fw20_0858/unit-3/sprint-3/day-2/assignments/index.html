@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+
+        }
+        body{
+            background-color: lightpink;
+        }
+        #mdiv{
+            width:100%;
+            height: 40px;
+            background-color: lightsalmon;
+            margin:30px auto;
+            border:1px solid black;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+        .user{
+            width:100%;
+            background-color: lightskyblue;
+            border:1px solid black;
+            margin:auto;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+            
+            height: 100px;
+        }
+        .admin{
+            width:100%;
+            background-color: lightyellow;
+            border:1px solid black;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+            
+            height: 100px;
+        }
+        .signup{
+            width:45%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+            justify-content: space-evenly;
+        }
+        .signup>input{
+            height:30px;
+            width:40%;
+            padding-left:12px
+        }
+        .signup>button{
+            height: 30px;
+        }
+        .login>button{
+            height: 30px;
+        }
+        .login{
+            width:45%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+            justify-content: space-evenly;
+          
+        }
+        .login>input{
+            height:30px;
+            width:40%;
+            padding-left: 12px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>For Students </h2>
+    <div class="user">
+        
+        <div class="signup">
+            <input type="text" placeholder="User_name" id="username">
+            <input type="text" id="password" placeholder="User Password">
+            <button onclick="Signup()">
+            Signup
+            </button>
+        
+        </div>
+        <div class="login">
+            <input type="text" placeholder="User Name" id="user_name">
+            <input type="text" id="pass_word" placeholder="User Password">
+            <button onclick="userlogin()">
+            Signup
+            </button>
+        </div>
+       
+   
+    </div>
+    <h2>For Admins  </h2>
+    <div class="admin">
+        
+        <div class="signup">
+            <input type="text" placeholder="Admin_name" id="Admin_sign_name">
+            <input type="text" id="Admin_sign_pass" placeholder="Admin Password">
+            <button onclick="adminSignup()">
+            Signup
+            </button>
+        </div>
+       
+<div class="login">
+    <input type="text" placeholder="Admin_name" id="Admin_login_name">
+    <input type="text" id="Admin_login_pass" placeholder="Admin Password">
+    <button onclick="adminlogin()">
+    Signup
+    </button>
+</div>
+    
+    </div>
+    
+    <div id="adminwork"></div>
+</body>
+</html>
+<script src="index.js"></script>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightpink;
+        }
+        #main{
+            margin:auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            width:40%;
+            height:auto;
+            padding: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            background-color: lightblue;
+        }
+        #main>input{
+            padding:10px 10px;
+            font-size: 16px;
+            border-radius: 10px;
+        }
+        button{
+            font-weight: bold;
+            font-size: 16px;
+            margin:20px ;
+            padding:20px;
+            border:1px solid black;
+            background-color: grey;
+            border-radius: 20px;
+        }
+        h1{
+            text-align: center;
+        }
+        p{
+            font-size: 25px;
+        }
+        button+p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1 >SIGN UP</h1>
+        <p>Full Name</p>
+        <input type="text" placeholder="Enter your full name" id="name">
+        <p>Email</p>
+        <input type="email" placeholder="Enter Email" id="email">
+        <p>Password</p>
+        <input type="password" placeholder="Enter Password" id="pass">
+
+        
+            <button id="btn">SIGN UP</button>
+        
+        <p>Already a user click here to <a id="anchor" href="loginpage.html">Login</a></p>
+        
+    </div>
+</body>
+
+<script>
+
+let mybtn=document.querySelector("#btn")
+document.querySelector("#btn").addEventListener("click",btnfun)
+let arr=[];
+
+
+
+function btnfun (){
+    event.preventDefault();
+    
+    let obj={
+    cname:document.querySelector("#name").value,
+    cemail:document.querySelector("#email").value,
+    cpass:document.querySelector("#pass").value,
+}
+arr.push(obj);
+
+localStorage.setItem("signup",JSON.stringify(arr));
+alert("SignUp successful Please Login to Continue")
+}
+document.querySelector("#anchor").addEventListener("click",fun)
+
+function fun(){
+    event.preventDefault();
+    
+    window.location.href="loginpage.html";
+}
+
+
+</script>
+</html>

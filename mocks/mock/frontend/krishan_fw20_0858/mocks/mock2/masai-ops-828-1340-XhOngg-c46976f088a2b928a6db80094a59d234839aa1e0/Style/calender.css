@@ -1,0 +1,18 @@
+.calender{
+    display: flex;
+    width: 90%;
+    border: 1px solid black;
+    margin: 1rem auto;
+    justify-content: space-evenly;
+}
+.calender > div >div{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid red;
+}
+@media only screen and (max-width: 900px) {
+    .calender{
+        flex-direction: column;
+    }
+}

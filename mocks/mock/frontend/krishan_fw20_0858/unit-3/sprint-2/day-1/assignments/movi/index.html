@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+        body{
+            background-image: linear-gradient(black,white);
+        }
+        #container{
+            width:80%;
+            margin:20px auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(auto,200px);
+            gap:30px;            
+        }
+        #container>div>img{
+            width:100%;
+        }
+        #container>div{
+            text-align: center;
+            background-image: linear-gradient(to top,white,black);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+    </style>
+  </head>
+  <body>
+    <button onclick="low()">Low to High</button>
+    <button onclick="High()">High to Low</button>
+    <div id="container"></div>
+  </body>
+</html>
+<script>
+  let getdata = JSON.parse(localStorage.getItem("data")) || [];
+
+  function display(arr) {
+    document.getElementById("container").innerHTML = "";
+
+    arr.forEach(function (el, ind) {
+
+        let cdiv=document.createElement("div");
+        
+      let img = document.createElement("img");
+      img.src=el.poster;
+
+      let name=document.createElement("h2");
+      name.innerText=el.name;
+
+      let reld=document.createElement("h3");
+      reld.innerText=el.releasedate;
+
+      let rating=document.createElement("h2");
+      rating.innerHTML=el.rating;
+
+        cdiv.append(img,name,reld,rating);
+
+        document.getElementById("container").append(cdiv)
+    });
+  }
+
+  function low(){
+    getdata.sort(function(a,b){
+        let x=a.rating;
+        let y=b.rating;
+        if(x>y){
+            return 1
+        }
+        else if(x<y){
+            return -1;
+        }
+        else{
+            return 0
+        }
+
+
+    })
+    display(getdata)
+  }
+
+  function High(){
+    getdata.sort(function(a,b){
+        let x=a.rating;
+        let y=b.rating;
+        if(x>y){
+            return -1
+        }
+        else if(x<y){
+            return 1;
+        }
+        else{
+            return 0
+        }
+
+
+    })
+    display(getdata)
+  }
+  display(getdata)
+</script>

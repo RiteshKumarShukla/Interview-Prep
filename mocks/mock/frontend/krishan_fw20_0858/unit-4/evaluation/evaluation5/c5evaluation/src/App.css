@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+
+.App {
+  text-align: center;
+}
+.form-wrapper{
+  border:1px solid black;
+  display: flex;
+  flex-direction: column;
+  width:40%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: lightpink;
+}
+.form-wrapper div{
+  text-align: left;
+  margin-bottom: 20px;
+}
+body{
+  background-color: lightblue;
+}
+.form-wrapper div>label,legend{
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.form-wrapper div input,select{
+  height: 30px;
+  width: 80%;
+}
+.form-wrapper div button{
+  padding: 15px 50px;
+}
+table, th,td{
+  border:1px solid black;
+  border-collapse: collapse;
+  margin: auto;
+  margin-top:50px;
+}
+th{
+  background-color: lightgreen;
+}
+td,th,tr{
+  width:150px;
+  height: 50px;
+
+}
+tr{
+  background-color: lightgray;
+}

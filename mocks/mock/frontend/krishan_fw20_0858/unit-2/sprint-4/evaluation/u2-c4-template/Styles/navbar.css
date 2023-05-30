@@ -1,0 +1,29 @@
+/* Write necessery css for navbar here  */
+
+#navbar{
+    width:99%;
+    height:60px;
+    background-color: black;
+    border:1px solid black;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    justify-content: space-between;
+}
+#navbar>div{
+    display: flex;
+    margin:0px 20px;
+    justify-content: space-between;
+}
+#navbar>h2{
+    color:white;
+}
+#navbar>div>a{
+    margin:0px 20px;
+}
+a:link{
+    color:white;
+    text-decoration: none;
+}
+a:visited{
+    color:white;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        background-image: linear-gradient(45deg, red ,yellow);
+      }
+      #bucket{
+        width:80%;
+        margin:50px auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:20px;
+        grid-template-rows: repeat(auto,200px);
+        text-align: center;
+      }
+      #bucket>div>img{
+       height: 200px;
+       width:200px;
+      }
+      #bucket>div{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 10px;
+        background-image:linear-gradient(135deg, black,white);
+        color:white;
+      }
+      #total-div{
+        background-image:linear-gradient(135deg, black,white);
+        color:white;
+        height: 60px;
+        display: flex;
+        align-items: center;
+      }
+      #bucket>div>button{
+        padding: 8px 12px;
+        margin: 10px auto;
+      }
+      #confirm_checkout{
+        position:absolute;
+        top:60px;
+        right:0px;
+        padding:12px 14px;
+      }
+    </style>
+  </head>
+
+  <style></style>
+
+  <body>
+    <div id="total-div">
+      <h3 id="total_amount">
+        <!--Show bucket total here, do not add anything only Total value. Not even "Total - 1200Rs" but like this "1200" -->
+      </h3>
+    </div>
+    <div id="bucket">
+      <!--Show all coffee added to bucket here-->
+     
+      <!-- add an remove button to each coffee so that you can remove that item from bucket, give the button HTML id as 'remove_coffee' -->
+    </div>
+<button id="confirm_checkout"> Checkout</button>
+    <!-- checkout link  -->
+  </body>
+</html>
+<script src="./scripts/bucket.js"></script>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reebok</title>
+    <style>
+        #main{
+            width:100%;
+            font-size: 22px;
+            height:70px;
+            border:1px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(81, 81, 228);
+            color: white;
+        }
+        #subhead{
+            color:white;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:100px;
+            margin:0px 40px;
+        }
+        
+        a:link{
+            color:white;
+        }
+        a:visited{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div>Reebok</div>
+        <div id="subhead">
+            <div><a href="menspage.html" class="check">Men</a></div>
+            <div><a href="womenspage.html" class="fcheck">Women</a></div>
+            <div><a href="loginpage.html">Login</a></div>
+            <div><a href="signuppage.html">Signup</a></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+document.querySelector(".check")
+.addEventListener("click",checkit)
+
+function checkit(){
+    event.preventDefault();
+
+    window.location.href="signuppage.html"
+}
+document.querySelector(".fcheck").addEventListener("click",fcheckit)
+
+function fcheckit(){
+    event.preventDefault();
+
+    window.location.href="signuppage.html"
+}
+</script>

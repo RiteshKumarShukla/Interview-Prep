@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mq</title>
+    <style>
+        #nav{
+            background-color: yellow;
+            font-size: 50px;
+            margin:20px 0px;
+        }
+        #box{
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(1,200px);
+            gap:20px;
+
+        }
+        #box>div:nth-child(1){
+            background-color: red;
+        }
+        #box>div:nth-child(2){
+            background-color: green;
+        }
+        #box>div:nth-child(3){
+            background-color: blue;
+        }
+        #box>div:nth-child(4){
+            background-color: grey;
+        }
+        @media all and (min-width:481px) and (max-width:768px){
+            #box{
+                grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,200px);
+            }
+            #box>div:nth-child(1){
+            background-color: red;
+            order:1;
+        }
+        #box>div:nth-child(2){
+            background-color: green;
+            order:3;
+        }
+        #box>div:nth-child(3){
+            background-color: blue;
+            order:2;
+        }
+        #box>div:nth-child(4){
+            background-color: grey;
+            order:4;
+        }
+
+        }
+        @media all and (min-width:320px) and (max-width:480px){
+            #box{
+                grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(4,200px);
+            }
+            #box>div:nth-child(1){
+            background-color: red;
+            order:1;
+        }
+        #box>div:nth-child(2){
+            background-color: green;
+            order:3;
+        }
+        #box>div:nth-child(3){
+            background-color: blue;
+            order:4;
+        }
+        #box>div:nth-child(4){
+            background-color: grey;
+            order:2;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">Navigation</div>
+    <div id="box">
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+    </div>
+</body>
+</html>

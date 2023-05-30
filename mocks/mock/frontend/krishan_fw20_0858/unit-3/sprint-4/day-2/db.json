@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "mor",
+      "author": "typicode",
+      "name": "mor"
+    },
+    {
+      "id": "Iron man 2",
+      "title": "https://i.pinimg.com/474x/04/f2/9b/04f29b61e4295fc9a285620df36e9626.jpg",
+      "author": "rt6"
+    }
+  ],
+  "products": [
+    {
+      "name": "omg",
+      "id": "2"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

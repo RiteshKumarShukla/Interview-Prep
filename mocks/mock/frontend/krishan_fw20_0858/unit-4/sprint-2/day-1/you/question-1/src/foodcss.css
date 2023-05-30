@@ -1,0 +1,11 @@
+
+.yo{
+    display: flex;
+    border:1px solid black;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: lightyellow;
+}

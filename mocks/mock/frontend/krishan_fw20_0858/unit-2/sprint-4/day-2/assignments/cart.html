@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <style>
+        table{
+            margin:auto;
+            border:1px solid black;
+            border-collapse: collapse;
+        }
+        th,td{
+            padding:20px 70px   ;
+            border:1px solid black;
+            border-collapse: collapse;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        th{
+            background-color: lightblue;
+        }
+        td{
+            width:auto;
+            height:auto;
+        }
+        input{
+            width:30px;
+            height:30px;
+        }
+        tbody>tr:nth-child(even){
+background-color: darkgray;
+        }
+        tbody>tr:nth-child(odd){
+background-color: lightgray;
+        }
+        tbody>tr>td>button{
+            padding:10px 15px;
+            font-size: 19px;
+        }
+        #total{
+            width: 97%;
+            height:70px; 
+            background-color: rgb(235, 211, 79);
+            padding:20px;   
+            border:1px solid black;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #payment{
+            padding:10px 15px;
+            font-size: 19px;
+        }
+    </style>
+    
+    
+</head>
+<body>
+<div id="total">
+    <div id="sub"><h1>Total Cart Value:- <span id="totalprice">0</span></h1></div>
+    <button id="payment"> Click for Payment</button></div>
+    
+    <div id="main"></div>
+    
+   
+    <table>
+        <thead>
+<tr>
+    <th>Product Image</th>
+    <th>Product name</th>
+    <th>₹ Price</th>
+    <th>Quantity</th>
+    <th>Delete</th>
+    
+</tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+<script>
+    let container=document.getElementById("main")
+
+let cartLs=JSON.parse(localStorage.getItem("cartpage")) || [];
+
+let totalprice=document.getElementById("totalprice");
+display(cartLs);
+function display(data){
+document.querySelector("tbody").innerHTML=""
+  let total=0;
+  data.forEach(function (el,ind){
+    total+=Number(el.price)
+    totalprice.textContent=total;
+    
+    let img=document.createElement("img")
+    img.src=el.image_url
+    let row=document.createElement("tr");
+    let col1=document.createElement("td");
+    col1.appendChild(img);
+
+    let col2=document.createElement("td");
+    col2.innerText=el.name;
+    let col3=document.createElement("td");
+    col3.innerText=el.price;
+    let col4=document.createElement("td");
+    let inp=document.createElement("input");
+    inp.setAttribute("type","text")
+    inp.innerText=1;
+    col4.appendChild(inp);
+    
+    let col5=document.createElement("td");
+    let btn=document.createElement("button")
+    btn.textContent="Delete"
+    col5.appendChild(btn)
+    col5.addEventListener("click",function (){
+        deletepro(ind)
+    })
+    
+    
+    row.append(col1,col2,col3,col4,col5);
+    document.querySelector("tbody").append(row);
+
+    
+  });
+  
+}
+
+display(cartLs);
+function deletepro(ind){
+    cartLs.splice(ind,1);
+    display(cartLs)
+    localStorage.setItem("cartpage",JSON.stringify(cartLs))
+}
+document.querySelector("#payment").addEventListener("click",function(){
+    window.location.href="payment.html"
+})
+</script>
+</html>

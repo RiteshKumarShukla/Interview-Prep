@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+<style>
+    #main{
+        width:410px;
+        height:auto;
+        
+        margin:auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #mainmm{
+        
+        display: flex;
+        justify-content: space-between;
+        width:400px;
+        margin:auto;
+        height:150px;
+    }
+    #mainmm>div{
+     width:100px;
+     height:auto;
+     
+    }
+    #mainmm>div>div{
+        height:70%;
+        display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 30px;
+     font-weight: bold;
+     border:2px solid black;
+     overflow: auto;
+    }
+    #mainmm>div>p{
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #score{
+        height:auto;
+        width:300px;
+        text-align: center;
+        margin:auto;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    #score>p{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #score>#display{
+        width:80%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        height:100px;
+        margin:auto;
+        background-color: grey;
+        border:2px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: bold;
+        overflow: auto;
+    }
+    #keypad{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows:repeat(3,60px); 
+        gap:10px;
+        margin:10px;
+    }
+    #keypad>div{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .orange{
+        background-color: orange;
+        border:2px solid black;
+    }
+    .green{
+        background-color: green;
+        border:2px solid black;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .black{
+        background-color: black;
+        color:white;    
+        border:2px solid black;
+        height:60px;
+        width:180px;
+        margin: 10px auto;
+    }
+    .purple{
+        background-color: purple;
+        color:white;
+        border:2px solid black;
+        height:60px;
+        width:80px;
+        margin:auto;
+    }
+    .rd{
+        background-color: red;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .lg{
+        background-color: lightgreen;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+</style>
+</head>
+<body>
+    <div id="main">
+    <div id="mainmm">
+        <div>
+            <div id="min" class="rd">43</div>
+            <p>Min</p>
+        </div>
+        <div>
+            <div id="max" class="lg">2019</div>
+            <p>Max</p>
+        </div>
+    </div>
+
+
+    <!-- //score box -->
+
+   
+    <div id="score">
+        <p>Score</p>
+        <div id="display">#</div>
+        <div id="keypad">
+        <div class="green btn">1</div>
+        <div class="orange btn">2</div>
+        <div class="green btn">3</div>
+        <div class="orange btn">4</div>
+        <div class="orange btn">5</div>
+        <div class="orange btn">6</div>
+        <div class="green btn">7</div>
+        <div class="orange btn">8</div>
+        <div class="green btn">9</div>
+        </div>
+        <div class="purple btn">0</div>
+    
+    <div id="enter" class="black btn">Enter</div>
+</div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    let bag="";
+    let chhota=document.querySelector("#min").innerText;
+    chhoto=+chhota;
+    let bda=document.querySelector("#max").innerText;
+    bda=+bda;
+    let clickno=document.querySelectorAll(".btn");
+    for(let x=0;x<clickno.length;x++){
+       clickno[x].addEventListener("click",myfun)
+    }
+    function myfun(){
+        let typ=event.target.innerText;
+      
+
+      if(typ=="Enter"){
+        if(bag>bda){
+            document.querySelector("#max").innerText=bag;
+            document.querySelector("#display").innerText="";
+            bag="";
+        }
+        else if(bag<chhota){
+            document.querySelector("#min").innerText=bag;
+            document.querySelector("#display").innerText="";
+            bag="";
+        }
+    
+        else{
+            document.querySelector("#display").innerText="";
+        }
+      }
+      else{
+        bag=bag+typ;
+        bag=+bag;
+      document.querySelector("#display").innerText=bag;
+      }
+    }
+</script>

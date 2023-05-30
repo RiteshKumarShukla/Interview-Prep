@@ -1,0 +1,92 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+#nav{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+#nav__first{
+    background-image: url(https://images.unsplash.com/photo-1589386417686-0d34b5903d23?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+#nav__first>p{
+    position: absolute;
+    top:0px;
+    left:10%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color:brown
+}
+
+#nav__second{
+    padding: 10px 10px 10px 2rem;
+    background-color: antiquewhite;
+}
+#nav__second_linkdiv{
+    width: 100%;
+    height: fit-content ;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    justify-content: space-evenly;
+}
+#nav__second_linkdiv>a{
+    color:gray;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#nav__second_linkdiv>a:nth-child(1){
+    color:brown;
+
+}
+#nav__second_details{
+    display: grid;
+    column-gap:3rem;
+    margin-top: 25%;
+}
+#nav__second_details>h2{
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+#nav__second_details>button{
+    width: 30%;
+    height: 2.5rem;
+    border-radius:25% 0 25% 0;
+    background-color: transparent;
+}
+.donec{
+    grid-area: first;
+    background-color: lightblue;
+}
+
+#aboutme{
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border:1px solid black;
+    display: grid;
+    gap:1rem;
+    /* display: inline-block; */
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 'first first . .' '. . . .';
+}
+#aboutme>div{
+    height: 250px;
+    /* width: 100%; */
+    border:1px solid black
+}
+
+#aboutme__picture{
+    background-image: url(https://images.unsplash.com/photo-1589386417686-0d34b5903d23?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHByb2Zlc3Npb25hbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,31 @@
+/* Write all the code related to the table here  */
+
+table{
+    margin:50px auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    width: 70%;
+}
+
+td,th{
+    padding:12px 15px;
+    border-collapse: collapse;
+}
+td{
+    background-color: lightgrey;
+    font-size: 18px;
+}
+th{
+    background-color: gold;
+    font-size: 20px;
+}
+h1{
+    margin-top:50px;
+    text-align: center;
+}
+select{
+    padding:10px 12px;
+    font-size: 18px;
+    margin-left:44%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

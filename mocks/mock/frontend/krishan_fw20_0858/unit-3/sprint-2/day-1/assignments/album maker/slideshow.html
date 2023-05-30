@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <style>
+         body{
+            background-image: linear-gradient(to right, black,white);
+        }
+        #container{
+            width: 60%;
+            margin: 50px auto;
+            display: flex;
+            border:1px solid black;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #container>img{
+            width:100%;
+        }
+
+        p{
+            color:white;
+        }
+        #main{
+            display: flex;
+            width:40%;
+            margin:auto;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+            
+        }
+        #main>button{
+            width:70px;
+            height:30px;
+        }
+        #time{
+            width:30px
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <p>Enter your Time <input type="number" id="time"></p>
+    <button onclick="start()">Start</button>
+    <button onclick="pause()">Pause</button>
+
+    </div>
+        <div id="container"></div>
+    
+</body>
+</html>
+<script src="./slideshow.js"></script>

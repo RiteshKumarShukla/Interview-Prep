@@ -1,0 +1,85 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": "89",
+      "title": "yes",
+      "author": "no"
+    },
+    {
+      "id": "26",
+      "title": "yes ",
+      "author": "no"
+    },
+    {
+      "id": "90",
+      "title": "mera",
+      "author": "mera"
+    },
+    {
+      "id": "91",
+      "title": "naam",
+      "author": "naam"
+    },
+    {
+      "id": "92",
+      "title": "krishan",
+      "author": "krishan"
+    },
+    {
+      "id": "93",
+      "title": "kumar",
+      "author": "kumar"
+    },
+    {
+      "id": "94",
+      "title": "hai",
+      "author": "hai"
+    },
+    {
+      "id": "95",
+      "title": "main",
+      "author": "main"
+    },
+    {
+      "id": "96",
+      "title": "bgarh",
+      "author": "bgarh"
+    },
+    {
+      "id": "97",
+      "title": "mein",
+      "author": "mein"
+    },
+    {
+      "id": "98",
+      "title": "rehta ",
+      "author": "rehta"
+    },
+    {
+      "id": "99",
+      "title": "hun",
+      "author": "hun"
+    }
+  ],
+  "menu":[
+    {
+      "title":"1",
+      "image":"url"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

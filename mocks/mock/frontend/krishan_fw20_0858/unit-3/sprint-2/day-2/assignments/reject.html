@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Failed</title>
+    <style>
+    body{
+        background-color:lightyellow;
+    }
+    #main{
+        width:100%;
+        height:200px;
+        border:1px solid black;
+        background-color: #E55443;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color:white;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 20px;
+
+    }
+    #main>h1{
+        font-weight: 500;
+    }
+    #main>img{
+        background-image: none;
+        width:3%
+    }
+    #id{
+        width:100%;
+        height: 100px;
+        border:1px solid black;
+        margin:5px auto;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #id>h3>p{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    #id>h3{
+        margin-left: 20px;
+    }
+    #id>p{
+        font-size:20px;
+        font-weight: 600;
+        margin-right: 20px;
+    }
+    #bill{
+        width:100%;
+        height: 100px;
+        border:1px solid black;
+        margin:5px auto;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #bill>div>img{
+        width:30%;
+        height: 40px;
+    
+    }
+    #bill>div{
+        width:25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 20px;
+    }
+    #bill>p{
+        font-size:20px;
+        font-weight: 600;
+        margin-right: 20px;
+    }
+    #dr{
+        width:100%;
+        height: 100px;
+        border:1px solid black;
+        margin:5px auto;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+    
+    }
+    #dr>div>img{
+        width:20%;
+        height: auto;
+    
+    }
+    #dr>div{
+        width:25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 20px;
+    }
+    #dr>p{
+        font-size:20px;
+        font-weight: 600;
+        margin-right: 20px;
+    }
+</style>
+</head>
+<body>
+<div id="main">
+    <img src="https://cdn2.iconfinder.com/data/icons/transparent-round-icons/512/tick.png" alt="">
+    <h1>Transaction Failed</h1>
+    <p id="time"></p>
+
+</div>
+<div id="id">
+    <h3>Transaction Id <p>N4356856748349824366</p></h3>
+    <p>Copy</p>
+</div>
+<div id="bill">
+    <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Paytm_Logo_%28standalone%29.svg/2560px-Paytm_Logo_%28standalone%29.svg.png" alt="">
+    <h3>Payment to Paytm</h3>
+    </div>
+    
+    <p>₹1000</p>
+</div>
+<div id="dr">
+    <div>
+        <img src="https://static.toiimg.com/photo/msid-74887573/74887573.jpg" alt="">
+    <h3>From your Bank</h3>
+    </div>
+    
+    <p>₹1000</p>
+</div>
+
+</body>
+</html>
+
+<script>
+const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+let today=new Date()
+document.querySelector("#time").innerHTML=today.getDate()+ " "+ month[today.getMonth()]+" " +'on'+ " "+today.toLocaleTimeString();
+</script>

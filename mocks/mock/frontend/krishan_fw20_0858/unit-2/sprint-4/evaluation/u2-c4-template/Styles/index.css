@@ -1,0 +1,29 @@
+/* Write css related to the Home page here  */
+
+#create{
+    width:40%;
+    margin: 30px auto;
+    padding : 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+h1{
+    text-align: center;
+}
+form{
+    padding : 30px;
+    display: flex;
+    flex-direction: column;
+   
+}
+input,select{
+    margin-bottom: 15px;
+    padding:15px;
+    font-size: 18px;
+}
+label{
+    font-size: 18px;
+    font-weight: bold;
+}
+

@@ -1,0 +1,24 @@
+//for creating single entry by using insertOne
+
+db.users.insertOne({firstName:"Q",lastName:"R",email:"Q@gmail.com",age:15,ipAddress:"MZJGSIO",gender:"female"})
+
+
+// for creating many entries by using insertMany
+db.users.insertMany([{firstName:"Z",lastName:"Y",email:"z@gmail.com",age:17,ipAddress:"456347",gender:"male"},
+{firstName:"M",lastName:"H",email:"M@gmail.com",age:18,ipAddress:"456347",gender:"female"},
+{firstName:"O",lastName:"I",email:"O@gmail.com",age:25,ipAddress:"DFGHJD",gender:"male"},
+{firstName:"K",lastName:"G",email:"K@gmail.com",age:35,ipAddress:"SGSGD",gender:"male"},
+{firstName:"I",lastName:"F",email:"I@gmail.com",age:45,ipAddress:"FDGSF",gender:"female"},
+{firstName:"G",lastName:"E",email:"G@gmail.com",age:55,ipAddress:"SDFGSH",gender:"male"},
+{firstName:"E",lastName:"D",email:"E@gmail.com",age:65,ipAddress:"FJFJJ",gender:"female"},
+{firstName:"C",lastName:"C",email:"C@gmail.com",age:75,ipAddress:"REWTYTR",gender:"male"},
+{firstName:"A",lastName:"B",email:"A@gmail.com",age:51,ipAddress:"456SGFS",gender:"female"}])
+
+
+// for selecting all entries
+
+db.users.find()
+
+// for selecting one entry
+
+db.users.find({firstName:"K"})

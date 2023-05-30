@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image:linear-gradient(45deg, black, blue, white);
+        }
+        input{
+            width:394px;
+            height:30px;
+        }
+        #movies{    
+            height:100px;
+            width:400px;
+            overflow: scroll;
+            color:white;
+            margin-top: 2px;
+        }
+        #pdata{
+            background-image: linear-gradient(to right,black,white);
+            margin-bottom: 5px;
+            height:40px;
+            display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        }
+        #movies::-webkit-scrollbar {
+      display: none;
+    }
+    #main{
+        width:40%;
+        margin:70px auto;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    #main>img{
+        width:80%;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <img src="https://external-preview.redd.it/QzYuoTIwrCmM-VSxS0iOvA5WeDkDqXsKa3e2FfOwmVE.jpg?auto=webp&s=8b5bd7ed34d6a5bdd1aa4d40cd461ad3b4bf1022" alt="">
+        <input type="text" id="query" oninput="debounce(main,1000)">
+        <div id="movies"></div>
+    </div>
+   
+</body>
+</html>
+<script src="index.js"></script>

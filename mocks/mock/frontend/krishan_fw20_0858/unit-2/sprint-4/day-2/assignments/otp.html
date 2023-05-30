@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify</title>
+    <style>
+        body{
+            background-color: lightpink;
+        }
+        #main{
+            width:30%;
+            text-align: center;
+            border:1px solid black;
+            padding:20px;
+            margin: 14% auto;
+            font-size: 30px;
+            font-weight: bold;
+            background-color: lightblue;
+        }
+        input{
+            padding:12px;
+            text-align: center;
+        }
+        #btn{
+            padding:10px 15px;
+            margin-top:10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+<p>Enter OTP</p>
+<input type="number" id="otp">
+<div><button id="btn">Enter</button></div>
+
+    </div>
+</body>
+<script>
+document.querySelector("#btn").addEventListener("click",function (){
+    if(document.querySelector("#otp").value=="1234"){
+        alert("Payment Successful")
+    }
+    else{
+        alert("Wrong Otp")
+    }
+})
+</script>
+</html>

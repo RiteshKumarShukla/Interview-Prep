@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Calculator</title>
+    <style>
+        h1{
+            color:teal;
+            text-align: center;
+        }
+        .container{
+            height:auto;
+            width:400px;
+            padding:20px 0px;
+            margin:auto;
+            border-radius: 25px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #display{
+            height:70px;
+            width:330px;
+            
+            margin:auto;
+            margin-top:30px;
+            margin-bottom:20px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 25px;
+        }
+        #keypad{
+            display:grid;
+            height:auto;
+            width:80%;
+            margin:20px 38px;
+            grid-template-columns: repeat(4,80px);
+            grid-template-rows: repeat(4,80px);
+            
+            
+            gap:5px
+        }
+        #keypad>div{
+            height:70px;
+            width:70px;
+            
+            font-size: 30px;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 25px;
+        }
+        .bl{
+            background-color: black;
+            color:white;
+            font-weight: bold;
+        }
+        #rd{
+            background-color: red;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Masai Calculator</h1>
+    <div class="container">
+        <div id="display"></div>
+        <div id="keypad">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div class="bl">+</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div class="bl">-</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div class="bl">x</div>
+        <div id="rd">C</div>
+        <div>0</div>
+        <div class="bl">=</div>
+        <div class="bl">/</div>
+    </div>
+    </div>
+</body>
+</html>
