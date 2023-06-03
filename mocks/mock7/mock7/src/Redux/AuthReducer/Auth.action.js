@@ -10,7 +10,7 @@ export const LoginFun = (payload) => (dispatch) => {
   dispatch({ type: LOGIN_RQUEST });
   return axios
     .get(
-      `https://mockdeploy.vercel.app/users?email=${payload.email}&password=${payload.password}`
+      `https://react-json-server-npz3.onrender.com/users?email=${payload.email}&password=${payload.password}`
     )
     .then((res) => {
       if (
@@ -26,3 +26,4 @@ export const LoginFun = (payload) => (dispatch) => {
     })
     .catch((err) => dispatch({ type: LOGIN_ERROR }));
 };
+

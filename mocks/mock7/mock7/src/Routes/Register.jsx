@@ -3,6 +3,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -10,7 +11,7 @@ const Register = () => {
   const navigate = useNavigate();
   const handleRegister = () => {
     axios
-      .post(`http://localhost:8080/users`, {
+      .post(`https://react-json-server-npz3.onrender.com/users`, {
         username,
         email,
         password,

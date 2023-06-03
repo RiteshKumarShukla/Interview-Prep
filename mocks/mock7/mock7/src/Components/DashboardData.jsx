@@ -30,32 +30,32 @@ const DashboardData = () => {
     "company_logo": "",
     "company_name": "",
     "company_type": "",
-	"stock_exchange": "",
-	"total_shares": 0,
-	"cost_per_share": 0,
-	"price_action": 0,
+    "stock_exchange": "",
+    "total_shares": 0,
+    "cost_per_share": 0,
+    "price_action": 0,
   });
- 
+
   const handleDelete = (id) => {
     dispatch(deleteAdminData(id)).then((res) => dispatch(getAdminData()));
   };
-  const handleChange = (event)=>{
-    let {name,value} = event.target;
-    setCompanyform({...companyform,[name]:value})
-}
+  const handleChange = (event) => {
+    let { name, value } = event.target;
+    setCompanyform({ ...companyform, [name]: value })
+  }
 
-const handleEdit = () => {
+  const handleEdit = () => {
     onOpen();
-};
+  };
 
-useEffect(() => {
+  useEffect(() => {
     dispatch(getAdminData());
-}, []);
+  }, []);
 
-const handlePatch =(id,data)=>{
-    dispatch(EditAdminData(id,companyform)).then(res=> dispatch(getAdminData()));
+  const handlePatch = (id, data) => {
+    dispatch(EditAdminData(id, companyform)).then(res => dispatch(getAdminData()));
     console.log(companyform);
-}
+  }
 
   return (
     <div>
@@ -88,51 +88,51 @@ const handlePatch =(id,data)=>{
                   <Td>{el.cost_per_share}</Td>
                   <Td>{el.price_action}</Td>
                   <Td>
-                    <Button onClick={()=>handleEdit(el.id)}>Edit</Button>
+                    <Button onClick={() => handleEdit(el.id)}>Edit</Button>
                   </Td>
                   <Td>
                     <Button onClick={() => handleDelete(el.id)}>Delete</Button>
                   </Td>
                   <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            
-        <Input  name='company_logo' placeholder="Enter Company Logo" onChange={(e)=>handleChange(e)}/>
-        <Input name='company_name' placeholder="Enter Company Name" onChange={(e)=>handleChange(e)}/>
-        <Select  name="company_type" placeholder="Enter Company Type" onChange={(e)=>handleChange(e)}>
-            <option value="Bank">Bank</option>
-            <option value="IT">IT</option>
-            <option value="Automobile">Automobile</option>
-            <option value="Pharma">Pharma</option>
-            <option value="Oil">Oil</option>
-        </Select>
-        <Select  name="stock_exchange" placeholder="Enter Stock Exchange" onChange={(e)=>handleChange(e)}>
-            <option value="NSE">NSE</option>
-            <option value="BSE">BSE</option>
-           
-        </Select>
-        <Input  name='total_shares' placeholder="Enter Company's Total Share" onChange={(e)=>handleChange(e)}/>
-        <Input  name='cost_per_share' placeholder="Enter Cost Per Share" onChange={(e)=>handleChange(e)}/>
-        <Input  name='price_action' placeholder="Enter Price Action" onChange={(e)=>handleChange(e)}/>
-          </ModalBody>
+                    <ModalOverlay />
+                    <ModalContent>
+                      <ModalHeader>Modal Title</ModalHeader>
+                      <ModalCloseButton />
+                      <ModalBody>
 
-          <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
-            <Button variant="ghost" onClick={()=>handlePatch(el.id)}>Confirm</Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+                        <Input name='company_logo' placeholder="Enter Company Logo" onChange={(e) => handleChange(e)} />
+                        <Input name='company_name' placeholder="Enter Company Name" onChange={(e) => handleChange(e)} />
+                        <Select name="company_type" placeholder="Enter Company Type" onChange={(e) => handleChange(e)}>
+                          <option value="Bank">Bank</option>
+                          <option value="IT">IT</option>
+                          <option value="Automobile">Automobile</option>
+                          <option value="Pharma">Pharma</option>
+                          <option value="Oil">Oil</option>
+                        </Select>
+                        <Select name="stock_exchange" placeholder="Enter Stock Exchange" onChange={(e) => handleChange(e)}>
+                          <option value="NSE">NSE</option>
+                          <option value="BSE">BSE</option>
+
+                        </Select>
+                        <Input name='total_shares' placeholder="Enter Company's Total Share" onChange={(e) => handleChange(e)} />
+                        <Input name='cost_per_share' placeholder="Enter Cost Per Share" onChange={(e) => handleChange(e)} />
+                        <Input name='price_action' placeholder="Enter Price Action" onChange={(e) => handleChange(e)} />
+                      </ModalBody>
+
+                      <ModalFooter>
+                        <Button colorScheme="blue" mr={3} onClick={onClose}>
+                          Close
+                        </Button>
+                        <Button variant="ghost" onClick={() => handlePatch(el.id)}>Confirm</Button>
+                      </ModalFooter>
+                    </ModalContent>
+                  </Modal>
                 </Tr>
               );
             })}
         </Tbody>
       </Table>
-      
+
     </div>
   );
 };

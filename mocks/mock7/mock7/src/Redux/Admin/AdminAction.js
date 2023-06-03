@@ -18,7 +18,7 @@ export const getAdminData = () => (dispatch) => {
   dispatch({ type: GET_ADMINDATA_REQUEST });
 
   return axios
-    .get(`https://mockdeploy.vercel.app/company`)
+    .get(`https://react-json-server-npz3.onrender.com/company`)
     .then((res) => dispatch({ type: GET_ADMINDATA_SUCCESS, payload: res.data }))
     .catch((err) => dispatch({ type: GET_ADMINDATA_ERROR }));
 };
@@ -27,16 +27,17 @@ export const deleteAdminData = (id) => (dispatch) => {
   dispatch({ type: DELETE_ADMIN_DATA_REQUEST });
 
   return axios
-    .delete(`https://mockdeploy.vercel.app/company/${id}`)
+    .delete(`https://react-json-server-npz3.onrender.com/company/${id}`)
     .then((res) => dispatch({ type: DELETE_ADMIN_DATA_SUCCESS }))
     .catch((err) => dispatch({ type: DELETE_ADMIN_DATA_ERROR }));
 };
+
 
 export const postAdminData = (data) => (dispatch) => {
   dispatch({ type: POST_ADMIN_DATA_REQUEST });
 
   return axios
-    .post(`https://mockdeploy.vercel.app/company/`, data)
+    .post(`https://react-json-server-npz3.onrender.com/company/`, data)
     .then((res) => dispatch({ type: POST_ADMIN_DATA_SUCCESS }))
     .catch((err) => dispatch({ type: POST_ADMIN_DATA_ERROR }));
 };
@@ -45,7 +46,7 @@ export const EditAdminData = (id, data) => (dispatch) => {
   dispatch({ type: EDIT_ADMIN_DATA_REQUEST });
 
   return axios
-    .patch(`https://mockdeploy.vercel.app/company/${id}`, data)
+    .patch(`https://react-json-server-npz3.onrender.com/company/${id}`, data)
     .then((res) => dispatch({ type: EDIT_ADMIN_DATA_SUCCESS }))
     .catch((err) => dispatch({ type: EDIT_ADMIN_DATA_ERROR }));
 };
