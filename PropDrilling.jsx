@@ -1,6 +1,7 @@
 //write a react component that receives an object as a prop and displays its prpoerty as list
 
 
+
 // parent component
 import React from 'react';
 
