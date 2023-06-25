@@ -1,0 +1,27 @@
+/* CSS combinators are selectors that allow you to target specific elements based on their relationship to other elements in the HTML structure. CSS provides several combinators that enable you to select elements based on their position relative to other elements. The four main CSS combinators are:
+*/
+
+/* Descendant combinator  */
+.parent-element .child-element {
+  /* Styles applied to child elements */
+}
+
+
+
+/* Child combinator (>): */
+.parent-element > .child-element {
+  /* Styles applied to direct child elements */
+}
+
+
+/* Adjacent sibling combinator (+):  */
+.element + .sibling-element {
+  /* Styles applied to the adjacent sibling element */
+}
+
+
+
+/* General sibling combinator (~): */
+.element ~ .sibling-element {
+  /* Styles applied to all sibling elements that come after the specified element */
+}
