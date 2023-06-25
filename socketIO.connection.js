@@ -47,4 +47,17 @@ webSocket.on("connection", (socket) => {
 
 
 
+//Disconnect
+socket.on('disconnect', () => {
+  // Handle disconnection logic here
+  console.log('Disconnected from the server');
+});
+socket.on('connect_error', (error) => {
+  // Handle connection error logic here
+  console.log('Connection error:', error);
+});
+
+
+
+
 
