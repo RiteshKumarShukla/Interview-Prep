@@ -23,7 +23,7 @@ const Star = ({ value, onClick, filled }) => {
   const starStyles = {
     cursor: 'pointer',
     color: filled ? 'gold' : 'gray',
-    fontSize: '100px', // Increase the font size for larger stars
+    fontSize: '100px',
   };
 
   return <span style={starStyles} onClick={() => onClick(value)}>*</span>;
