@@ -8,11 +8,8 @@ app.post('/register', async (req, res) => {
   try {
     const { username, password } = req.body;
 
-    // Generate a salt
-    const salt = await bcrypt.genSalt(10);
-
-    // Hash the password using the generated salt
-    const hashedPassword = await bcrypt.hash(password, salt);
+    // Hash the password
+    const hashedPassword = await bcrypt.hash(password, 10);
 
     // Store the username and hashed password in your database
     // (Replace this with your own database logic)
