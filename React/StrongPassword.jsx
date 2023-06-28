@@ -41,7 +41,7 @@ const StrongPasswordChecker = () => {
             {isStrong ? (
                 <p>Password is strong!</p>
             ) : (
-                <p>Password is not strong. It should contain at least 8 characters, including uppercase, lowercase, and numbers.</p>
+                <p style={{ color: 'red' }}>Password is not strong. It should contain at least 8 characters, including uppercase, lowercase, and numbers.</p>
             )}
         </div>
     );
