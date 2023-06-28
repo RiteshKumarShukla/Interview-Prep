@@ -1,0 +1,9 @@
+|                     | Throttling                                                                        | Debouncing                                                                                          |
+| ------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Goal                | Limit the frequency of function/event invocations                                 | Delay function/event execution until a period of inactivity occurs                                  |
+| Execution Behavior  | Executes the function at most once every specified interval                       | Delays function execution until a period of inactivity occurs, resets timer on each invocation      |
+| Invocation Handling | Ignores subsequent invocations within the interval                                | Resets timer on each invocation, delaying the function execution                                    |
+| Use Cases           | High-frequency events like scrolling or mousemove                                 | Input fields, search suggestions, autocomplete                                                      |
+| Implementation      | Uses a timer to limit the rate of function invocations                            | Uses a timer to delay function execution and reset on each invocation                               |
+| Resulting Behavior  | Functions are executed at a controlled rate, maintaining a steady flow            | Function execution is delayed until a period of inactivity occurs, reducing unnecessary invocations |
+| Example             | Throttling the scroll event to improve performance and reduce excessive scrolling | Debouncing input events to perform search suggestions after the user has finished typing            |
