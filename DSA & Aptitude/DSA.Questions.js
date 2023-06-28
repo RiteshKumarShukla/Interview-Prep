@@ -81,4 +81,34 @@ console.log('Minimum changes required:', minChanges);
 
 
 
+// you have given N balls. Each one of them has a number (k) printed on them. You Need to find a number of ways of selecting two balls (unique pairs of index) having the same numberprinted on them, without considering the $ith $ball for each i.
 
+
+function solve(n, m, arr) {
+    for (let i = 0; i < n; i++) {
+      const obj = {};
+      let res = 0;
+      for (let j = 0; j < n; j++) {
+        if (j !== i) {
+          if (obj[arr[j]]) {
+            obj[arr[j]]++;
+          } else {
+            obj[arr[j]] = 1;
+          }
+        }
+      }
+  
+      for (let key in obj) {
+        if (obj[key] > 1) {
+          res += (obj[key] * (obj[key] - 1)) / 2;
+        }
+      }
+      console.log(res);
+    }
+  }
+  
+  const n = 6;
+  const m = 3;
+  const arr = [1, 2, 3, 2, 3, 1];
+  solve(n, m, arr);
+  
