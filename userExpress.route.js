@@ -5,26 +5,29 @@ const app = express();
 
 // Root path route
 app.get('/', (req, res) => {
-  res.send('Welcome to the root path!');
+    res.send('Welcome to the root path!');
 });
 
 // /users path route
 app.get('/users', (req, res) => {
-  res.send('Users page');
+    res.send('Users page');
 });
 
 // /users/:id path route
 app.get('/users/:id', (req, res) => {
-  const userID = req.params.id;
-  res.send(`User ID: ${userID}`);
+    const userID = req.params.id;
+    res.send(`User ID: ${userID}`);
 });
 
 // 404 error handling
 app.use((req, res) => {
-  res.status(404).send('404 Not Found');
+    res.status(404).send('404 Not Found');
 });
 
 // Start the server
 app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+    console.log('Server is running on port 3000');
 });
+
+
+

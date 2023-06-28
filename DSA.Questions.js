@@ -82,4 +82,3 @@ console.log('Minimum changes required:', minChanges);
 
 
 
-Define three routes using App.get() method : one for the root path , one for the /users path ,and one for the /users/:id path (which accepts a URL parameter for the userID). Define a 404 error handling using App.use() method, which will be invoked when no other routes match the incoming request in express.js
