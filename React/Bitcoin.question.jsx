@@ -1,7 +1,7 @@
 /*You have been tasked with building a dashboard that displays a real time bitcoin prices from the coinbase API. The dashboard should fetch the current bitcoin price every  second and display it in a visually appealing WebAssembly. Additionaly, the dashboard should display a line chart of the bitcoin price over time, with the cart updating  in real-time as new data is received. Please create a react component called bitcoin dashboard that accomplishes these requirements. The component should :
 
-1. Fetch current bticoin price every second from the coinbase API.
-2. Display the current bticoin price in a visually appealing way.
+1. Fetch current bitcoin price every second from the coinbase API.
+2. Display the current bitcoin price in a visually appealing way.
 3. Display a line chart of the bitcoin price over time , with the chart updating in real-time as new data is received. 
 4. Use the recharts library to display the line charts.
 5. Use web WebSocket to receive real time updated from coinbase api.

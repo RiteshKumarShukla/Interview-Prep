@@ -6,7 +6,7 @@ const http = require("http");
 const server = http.createServer(app);
 
 app.get('/', (req, res) => {
-    res.send("base url");
+    res.send("Welcome to Home Page...!!!");
 });
 
 server.listen(8080, () => {
