@@ -1,4 +1,4 @@
-// Write a function in js (using react) that tackes in a product and a quantity as arguments and adds the products to the cart. The cart should be an array of objects, where each object represents a product and its corresponding quantity. The function should then console.log the updated cart. Use below data for doing this task.
+// Write a function in js (using react) that takes in a product and a quantity as arguments and adds the products to the cart. The cart should be an array of objects, where each object represents a product and its corresponding quantity. The function should then console.log the updated cart. Use below data for doing this task.
 
 import React, { useState } from "react";
 
@@ -34,6 +34,7 @@ const addToCart = (product, quantity, cart, setCart) => {
             quantity
         };
         setCart([...cart, cartItem]);
+
     }
 };
 
@@ -43,6 +44,7 @@ const ProductComponent = () => {
     // Function to add product to cart
     const handleAddToCart = (product, quantity) => {
         addToCart(product, quantity, cart, setCart);
+        console.log(cart)
     };
 
     return (
