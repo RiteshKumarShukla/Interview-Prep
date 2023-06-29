@@ -81,7 +81,7 @@ console.log('Minimum changes required:', minChanges);
 
 
 
-// you have given N balls. Each one of them has a number (k) printed on them. You Need to find a number of ways of selecting two balls (unique pairs of index) having the same number printed on them, without considering the $ith $ball for each i.
+// you have given N balls. Each one of them has a number (k) printed on them. You Need to find a number of ways of selecting two balls (unique pairs of index) having the same numberprinted on them, without considering the $ith $ball for each i.
 
 
 function solve(n, m, arr) {
