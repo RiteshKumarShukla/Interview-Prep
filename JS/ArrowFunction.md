@@ -12,7 +12,7 @@ const functionName = (param1, param2, ...) => {
   // Code to be executed
   return result; // Optional
 };
-
+```
 
 - `const functionName`: The name of the function (optional). You can assign the arrow function to a variable or use it as an anonymous function.
 - `(param1, param2, ...)`: Parameters of the function (optional). These are the inputs that the function can accept.
