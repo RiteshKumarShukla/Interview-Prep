@@ -1,158 +1,113 @@
-Q1). There are three anst sitting on three corners of a tringle . All  ants randomly pick a direction and start moving along edge of the triangle . What is the probability that any two ants collide?
+# Aptitude Questions
 
-A). To determine the probability that any two ants will collide, we can consider the possible scenarios in which a collision can occur and calculate the probability for each scenario. Let's analyze the different cases:
+## Question 1
+A man fell into a well. The well is 30 meters deep. In a day, he can climb only 4 meters but slips down 3 meters. How many days would he take to come out of the well?
 
-All ants move in the same direction: In this case, the ants will never collide as they are all moving in the same direction along the edges of the triangle. The probability of this scenario is 0.
+## Answer 1
+To calculate the number of days it would take for the man to come out of the well, we need to determine the net progress he makes each day. The net progress is the difference between the distance he climbs (4 meters) and the distance he slips down (3 meters). 
 
-Two ants move in the same direction, and one moves in the opposite direction: In this case, the two ants moving in the same direction will collide. The ant moving in the opposite direction will pass between them without colliding. There are three possible pairs of ants that can be moving in the same direction. The probability of this scenario is (1/2) * (1/2) * 3 = 3/4.
+Net progress per day = Climb distance - Slip distance = 4 meters - 3 meters = 1 meter.
 
-One ant moves clockwise, one ant moves counterclockwise, and one ant moves in the opposite direction: In this case, all three ants will collide at the center of the triangle. The probability of this scenario is (1/2) * (1/2) * (1/2) = 1/8.
+Since the well is 30 meters deep, the man needs to cover a total distance of 30 meters. 
 
-To find the total probability of any two ants colliding, we sum up the probabilities of the different cases:
+Number of days = Total distance / Net progress per day = 30 meters / 1 meter = 30 days.
 
-Probability = Probability of case 2 + Probability of case 3
-= 3/4 + 1/8
-= 6/8 + 1/8
-= 7/8
+Therefore, it would take the man 30 days to come out of the well.
 
-Therefore, the probability that any two ants will collide is 7/8, or approximately 0.875, assuming all directions are chosen with equal probability.
+## Question 2
+A mother calls her two children, a boy and a girl, to play without getting dirty. However, while playing, both children get mud on their foreheads. The mother says, "At least one of you has a muddy forehead." She then asks the children to answer "Yes" or "No" to the question, "Do you know whether you have a muddy forehead?". The mother asks this question twice. What will the children answer each time this question is asked, assuming that a child can see whether his/her sibling has a muddy forehead but cannot see his or her own forehead? Assume both the children are honest, and the children answer each question simultaneously.
 
+## Answer 2
+Let's consider the scenario where both children have muddy foreheads. In this case, each child can see the mud on their sibling's forehead but cannot see their own. 
 
+When the mother asks the question, "Do you know whether you have a muddy forehead?", both children will answer "No". This is because even though they can see the mud on their sibling's forehead, they cannot determine whether their own forehead is muddy.
 
+When the question is asked for the second time, the children will give the same answer, "No", because the situation and their knowledge about their own foreheads have not changed.
 
+Therefore, both children will answer "No" to the question each time it is asked.
 
+## Question 3
+A man is allocated a task. He doubles the task done every day. If the man completely does the task in 18 days, how many days did it take for the man to complete 25% of the task?
 
+## Answer 3
+Let's assume the task can be represented by a value of 1. On the first day, the man completes 1/18th of the task. 
 
+The task completed on each subsequent day can be represented as follows:
 
+Day 1: 1/18
+Day 2: 2/18 (doubled the previous day's progress)
+Day 3: 4/18
+Day 4: 8/18
+...
+Day 18: 1 (completed the entire task)
 
-Q2). A man is allocated to a task . He doubles the task done everyday . If the man completely does the task in 18 days, how many days did it take for the man to complete 25% of the task?
+To determine the number of days it took for the man to complete 25% of the task, we need to find the day when the cumulative progress reaches 1/4.
 
-A). To solve this problem, we can work backwards from the total number of days it took for the man to complete the task.
+Cumulative progress on each day:
+Day 1: 1/18
+Day 2: 3/18
+Day 3: 7/18
+Day 4: 15/18
+Day 5: 31/18 (more than 1/4)
 
-Let's assume that it took the man "x" number of days to complete 25% of the task.
+Therefore, it took the man 5 days to complete 25% of the task.
 
-Given that the man doubles the task done every day, we can conclude that on the previous day (day "x-1"), the man would have completed 50% of the task (doubled from day "x-2").
+## Question 4
+There are three ants sitting on three corners of a triangle. All ants randomly pick a direction and start moving along the edge of the triangle. What is the probability that any two ants collide?
 
-Similarly, on day "x-2", the man would have completed 25% of the task.
+## Answer 4
+To calculate the probability of two ants colliding, we need to consider all possible scenarios where the ants move in opposite directions. 
 
-Therefore, we can set up the following equation:
+Each ant has two possible directions to choose from, resulting in a total of 2^3 = 8 possible combinations. Out of these combinations, there are 3 scenarios where two ants will collide:
 
-25% of the task = 50% of the task * 0.5
+1. Ant 1 moves clockwise, Ant 2 moves counterclockwise, Ant 3 moves clockwise.
+2. Ant 1 moves counterclockwise, Ant 2 moves clockwise, Ant 3 moves counterclockwise.
+3. Ant 1 moves clockwise, Ant 2 moves counterclockwise, Ant 3 moves counterclockwise.
 
-Simplifying this equation, we have:
+Therefore, the probability of any two ants colliding is 3 out of 8, which can be simplified to 3/8.
 
-0.25 = 0.5 * 0.5
+## Question 5
+You are blindfolded, and 10 coins are placed in front of you on the table. You are allowed to touch the coins but cannot tell which way up they are by feel. You are told that there are 5 coins head up and 5 coins tail up but not which ones are which. Can you make two piles of coins, each with the same number of heads up? You can flip the coins any number of times.
 
-0.25 = 0.25
+## Answer 5
+Yes, it is possible to make two piles of coins with the same number of heads up. Here's how:
 
-This equation is true, indicating that the man completed 25% of the task on day "x-2".
+1. Divide the 10 coins into two groups of 5 coins each.
+2. Flip all the coins in one of the groups.
+3. Now, in each group, there will be a random number of heads up and tails up coins. Let's say Group A has a(x) heads up and b(y) tails up, and Group B has c(x) heads up and d(y) tails up.
+4. Take Group A and remove a(x) coins from it.
+5. Take Group B and remove d(y) coins from it.
+6. Combine the remaining coins from Group A and Group B. Now, you will have (5 - a(x)) + (5 - d(y)) = (10 - a(x) - d(y)) coins.
+7. This new combined group of coins will have the same number of heads up as tails up because you removed the same number of heads up and tails up coins from Group A and Group B.
+8. Therefore, you have successfully made two piles of coins with the same number of heads up.
 
-Therefore, it took the man "x-2" days to complete 25% of the task.
+## Question 6
+A patch of lily pads covers an area within a lake, and the patch doubles its size every day. If it takes 48 days for the lilies to cover the entire lake, how long does it take to cover half the lake?
 
-Since we are given that the man completely does the task in 18 days, we can substitute this value into our equation:
+## Answer 6
+Since the patch of lily pads doubles in size every day, we can determine the number of days it takes to cover half the lake by counting the number of times the patch needs to double to reach that size.
 
-18 - 2 = 16
+If it takes 48 days for the patch to cover the entire lake, then it takes 47 days for the patch to cover half the lake. This is because on the 47th day, the patch would be half the size of the lake, and on the 48th day, it would double in size to cover the entire lake.
 
-Therefore, it took the man 16 days to complete 25% of the task.
+Therefore, it takes 47 days for the lilies to cover half the lake.
 
+## Question 7
+In a country, all families want a boy. They keep having babies until a boy is born. What is the expected ratio of boys and girls in the country?
 
+## Answer 7
+To determine the expected ratio of boys and girls in the country, we need to consider the probability of having a boy or a girl in each birth.
 
+The probability of having a boy or a girl is equal, which is 1/2 or 0.5. Therefore, in each birth, there is a 50% chance of having a boy and a 50% chance of having a girl.
 
+Since families keep having babies until a boy is born, the number of births can vary. However, on average, the number of births required until a boy is born is 2. Therefore, let's consider two births:
 
+1. Boy (B) - Girl (G)
+2. Boy (B)
 
-Q3). You are blindfolded and 10 coins are placed in front of you on the table, You are allowed to touch the coins but can not tell which way up they are by feel. You are told that there are 5 coins head up , and 5 coins tells up but not which ones are which. can you make two piles of coins each with tha name number of heads up ? You can filp the coins any number of times.
+In this scenario, we have one boy and one girl. The ratio of boys to girls is 1:1.
 
-A). Yes, it is possible to make two piles of coins with the same number of heads up. Here's how you can do it:
+Considering all possible combinations, the expected ratio of boys to girls remains 1:1.
 
-Divide the coins into two groups of 5 each.
+Therefore, the expected ratio of boys and girls in the country is 1:1.
 
-Flip all the coins in one group. This means if a coin was initially heads up, flip it to tails up, and if it was tails up, flip it to heads up.
 
-Now, we have two groups of coins, one with the original orientation and the other with all the coins flipped.
-
-Take one coin from the first group and one coin from the second group and place them in separate piles, keeping track of their initial orientation (heads or tails).
-
-Repeat step 4 four more times, selecting one coin from each group each time and placing them in the respective piles.
-
-By following these steps, you'll end up with two piles of coins, each containing 5 coins with the same number of heads up. The reason this works is that if the original orientation of the coins in the first group had n heads up, then the second group would have had 5 - n heads up. When you flip the second group, the orientation of the coins is reversed, so now the second group has n heads up and the first group has 5 - n heads up.
-
-Note that during this process, you are allowed to flip the coins any number of times to change their orientation, but you cannot determine the orientation of any individual coin by touch alone.
-
-
-
-
-
-
-
-Q4). A patch if lily pads covers an area within a lake, and the patch doubles its size every day . If it takes 48 days for the lilies to cover the entire lake. How long does it take to cover half the lake
-
-A). Since the lily patch doubles in size every day, we can work backward to determine how many days it would take to cover half the lake.
-
-Given that it takes 48 days for the lilies to cover the entire lake, we can assume that on the day before, the lilies would have covered half the lake.
-
-Let's denote the number of days it takes to cover half the lake as "x". On the day before (x-1), the lilies would have covered half the lake, which means the patch would be half its final size.
-
-If the patch doubles in size every day, then on the previous day (x-2), it would have been half the size of the patch on day (x-1). Continuing this pattern, on day 1, the patch would have been half the size of the patch on day 2.
-
-Therefore, we can set up the following equation:
-
-(1/2) * 2 * 2 * 2 * ... (x times) = 1/2
-
-Simplifying the equation, we have:
-
-(1/2) ^ (x-1) = 1/2
-
-Taking the logarithm of both sides with base 2, we have:
-
-log₂((1/2) ^ (x-1)) = log₂(1/2)
-
-(x-1) * log₂(1/2) = -1
-
-(x-1) * (-1) = -1
-
-x - 1 = 1
-
-x = 2
-
-Therefore, it would take 2 days for the lilies to cover half the lake.
-
-
-
-
-
-
-
-Q5). In a country , all families want a boy. They keep having babies till a boy is born. What is the expected ratio of boys and girls in country. Solve in jhs
-ChatGPT
-To solve this problem, we can use the concept of probability to determine the expected ratio of boys and girls in the country.
-
-Let's assume that the probability of having a boy is "p" and the probability of having a girl is "q" (where p + q = 1).
-
-In each family, the probability of having a boy on the first child is "p". If the family doesn't have a boy on the first child, they continue having children until a boy is born. The probability of having a girl on each subsequent child is "q" (since they keep having babies until a boy is born).
-
-Now, let's calculate the expected ratio of boys and girls in the country:
-
-The probability of having only one child (a boy) is p.
-The probability of having two children (girl-boy) is q * p.
-The probability of having three children (girl-girl-boy) is q * q * p.
-The probability of having four children (girl-girl-girl-boy) is q * q * q * p.
-And so on.
-The expected ratio of boys and girls can be calculated as the sum of the probabilities for each scenario multiplied by the number of boys in that scenario. Since the ratio is typically expressed as the number of boys per girl, we can divide the sum of the probabilities by the number of girls.
-
-Let's represent the expected ratio as "R":
-
-R = (1 * p + 2 * q * p + 3 * q * q * p + 4 * q * q * q * p + ...) / (1 * q * p + 2 * q * q * p + 3 * q * q * q * p + ...)
-
-Simplifying this equation, we have:
-
-R = (p / q) / (1 + q + q^2 + q^3 + ...)
-
-Using the sum of an infinite geometric series formula, we can simplify the denominator:
-
-R = (p / q) / (1 / (1 - q))
-
-Simplifying further, we have:
-
-R = p / (q * (1 - q))
-
-Therefore, the expected ratio of boys to girls in the country is p / (q * (1 - q)).
